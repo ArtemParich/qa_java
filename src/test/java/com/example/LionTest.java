@@ -3,6 +3,7 @@ package com.example;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 
 import java.util.List;
@@ -16,9 +17,10 @@ public class LionTest {
     Feline feline;
 
     @Test
-    public void getKittensEqualsZero() throws Exception {
+    public void getKittensEqualsOne() throws Exception {
         Lion lion = new Lion ("Самка", feline);
-        int expected = 0;
+        Mockito.when(lion.getKittens()).thenReturn(1);
+        int expected = 1;
         int actual = lion.getKittens();
         assertEquals(actual, expected);
     }
