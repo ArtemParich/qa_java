@@ -36,7 +36,7 @@ public class FelineTest {
     }
 
     @Test
-    public void getKittensReturnEqualsFive() {
+    public void getKittensReturnEqualsRequest() {
         Feline feline = new Feline();
 
         int expected = 5;
