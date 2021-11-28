@@ -1,19 +1,16 @@
 package com.example;
 
-import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.mockito.junit.MockitoJUnit;
-import org.mockito.junit.MockitoRule;
+import org.mockito.Mock;
 
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class LionParameterizationTest {
 
-    @Rule
-    public MockitoRule rule = MockitoJUnit.rule();
+    @Mock
     Feline feline;
 
     private final String sex;
