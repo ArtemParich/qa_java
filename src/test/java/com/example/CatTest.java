@@ -3,8 +3,11 @@ package com.example;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 
+
+import java.util.List;
 
 import static org.junit.Assert.*;
 
@@ -25,13 +28,12 @@ public class CatTest {
     }
 
     @Test
-    public void getFoodException() {
+    public void getFoodEqualsList() throws Exception {
         Cat cat = new Cat(feline);
 
-        try {
-            cat.getFood();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+        Mockito.when(cat.getFood()).thenReturn(List.of("Животные", "Птица", "Рыба"));
+        List<String> actual = cat.getFood();
+        List<String> expected = List.of("Животные", "Птица", "Рыба");
+        assertEquals(expected, actual);
+ }
 }
