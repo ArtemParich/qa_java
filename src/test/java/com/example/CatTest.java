@@ -25,16 +25,6 @@ public class CatTest {
     }
 
     @Test
-    public void getSoundNoEqualsMewMew() {
-        Cat cat = new Cat(feline);
-
-        String actualSound = cat.getSound();
-        String expectedSound = "МяуМяу";
-
-        assertNotEquals (actualSound, expectedSound);
-    }
-
-    @Test
     public void getFoodException() {
         Cat cat = new Cat(feline);
 
